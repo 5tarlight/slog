@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import HeaderItem from './HeaderItem'
 
 const HeaderWrapper = styled.header`
   width: 100%;
@@ -9,7 +10,10 @@ const HeaderWrapper = styled.header`
 `
 
 const Header = () => (
-  <HeaderWrapper />
+  <HeaderWrapper>
+    <HeaderItem to='/' positon='left'>홈</HeaderItem>
+    <HeaderItem to='/login' positon='left'>로그인</HeaderItem>
+  </HeaderWrapper>
 )
 
 export default Header
