@@ -3,15 +3,9 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 const HeaderItemWrapper = styled.span`
-  float: ${props => ( props.position === 'left' ? 'left' : 'right' )};
+  float: ${props => (props.position === 'left' ? 'left' : 'right')};
   color: black;
 `
-
-const style = {
-  textDecoration: 'none',
-  color: 'black',
-  textAlign: 'center'
-}
 
 const Label = styled.div`
   width: 5rem;
@@ -23,6 +17,12 @@ const Label = styled.div`
     font-size: 1.2rem;
   }
 `
+
+const style = {
+  textDecoration: 'none',
+  color: 'black',
+  textAlign: 'center'
+}
 
 const HeaderItem = ({ to, positon, children }) => (
   <HeaderItemWrapper position={positon}>
