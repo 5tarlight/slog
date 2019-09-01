@@ -1,8 +1,11 @@
-import React from 'react'
-import { StartButton } from '../component'
+import React, { Fragment } from 'react'
+import { StartButton, ImageBackground } from '../component'
 
 const Portal = () => (
-  <StartButton />
+  <Fragment>
+    <ImageBackground />
+    <StartButton />
+  </Fragment>
 )
 
 export default Portal
