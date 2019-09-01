@@ -14,10 +14,6 @@ const Button = styled.button`
   }
 `
 
-const handleClick = (e) => {
-  e.preventDefault()
-}
-
 const style = {
   textDecoration: 'none',
   color: 'black',
@@ -26,9 +22,11 @@ const style = {
 }
 
 const StartButton = () => (
-  <Button onClick={handleClick}>
-    <Link to='/login' style={style}>시작하기</Link>
-  </Button>
+  <Link to='/login'>
+    <Button renderAs='button'>
+      <span style={style}>시작하기</span>
+    </Button>
+  </Link>
 )
 
 export default StartButton
