@@ -9,7 +9,7 @@ const HeaderItemWrapper = styled.span`
 
 const Label = styled.div`
   width: 5rem;
-  line-height: 1.875rem;
+  line-height: 2.625rem;
   font-size: 1rem;
   transition: font-size 300ms ease;
 
@@ -24,8 +24,8 @@ const style = {
   textAlign: 'center'
 }
 
-const HeaderItem = ({ to, positon, children }) => (
-  <HeaderItemWrapper position={positon}>
+const HeaderItem = ({ to, position, children }) => (
+  <HeaderItemWrapper position={position}>
     <Link to={to} style={style}>
       <Label>
         {children}
