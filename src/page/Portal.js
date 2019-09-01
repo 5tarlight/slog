@@ -1,7 +1,8 @@
 import React from 'react'
+import { StartButton } from '../component'
 
 const Portal = () => (
-  <h1>Portal</h1>
+  <StartButton />
 )
 
 export default Portal
