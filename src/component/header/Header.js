@@ -14,7 +14,7 @@ const HeaderWrapper = styled.header`
 const Header = () => (
   <HeaderWrapper>
     <HeaderItem to='/' positon='left'>
-      <img src={home} alt='홈' width='20' style={{marginTop: '0.3rem'}}/>
+      <img src={home} alt='홈' width='20' style={{ marginTop: '0.3rem' }} />
     </HeaderItem>
     <HeaderItem to='/login' positon='left'>로그인</HeaderItem>
   </HeaderWrapper>
