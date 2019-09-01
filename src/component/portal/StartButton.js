@@ -27,7 +27,7 @@ const style = {
 
 const StartButton = () => (
   <Button onClick={handleClick}>
-    <Link to={'/login'} style={style}>시작하기</Link>
+    <Link to='/login' style={style}>시작하기</Link>
   </Button>
 )
 
