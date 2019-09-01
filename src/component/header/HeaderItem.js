@@ -14,7 +14,7 @@ const Label = styled.div`
   transition: font-size 300ms ease;
 
   &:hover {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 `
 
