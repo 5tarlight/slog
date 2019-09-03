@@ -18,7 +18,7 @@ const Wrapper = styled.div`
   border: none;
 `
 
-const MenuWrapper = ({children}) => (
+const MenuWrapper = ({ children }) => (
   <Wrapper>
     {children}
   </Wrapper>
