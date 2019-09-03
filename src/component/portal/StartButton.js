@@ -7,13 +7,13 @@ const Button = styled.button`
   width: 20rem;
   height: 8rem;
   border-radius: 0.5rem;
-  background-color: white;  
+  background-color: transparent;  
   top: 50%;
   left: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
   justify-content: center;
-  border: 1px solid grey;
+  border: 5px solid white;
 
   &:hover {
     cursor: pointer;
@@ -22,7 +22,7 @@ const Button = styled.button`
 
 const style = {
   textDecoration: 'none',
-  color: 'black',
+  color: 'white',
   fontSize: '1.5rem',
   fontWeight: 'bold'
 }
