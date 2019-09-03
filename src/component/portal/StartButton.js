@@ -4,10 +4,16 @@ import { Link } from 'react-router-dom'
 
 const Button = styled.button`
   border: none;
-  width: 10rem;
-  height: 4rem;
+  width: 20rem;
+  height: 8rem;
   border-radius: 0.5rem;
-  background-color: white;
+  background-color: white;  
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  border: 1px solid grey;
 
   &:hover {
     cursor: pointer;
@@ -17,8 +23,8 @@ const Button = styled.button`
 const style = {
   textDecoration: 'none',
   color: 'black',
-  fontSize: '1rem',
-  fontWeight: 'bold'
+  fontSize: '1.5rem',
+  fontWeight: 'bold',
 }
 
 const StartButton = () => (
