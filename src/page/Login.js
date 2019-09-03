@@ -1,7 +1,13 @@
 import React from 'react'
+import { MenuWrapper, ImageBackground } from '../component'
 
 const Login = () => (
-  <h1>Login</h1>
+  <>
+    <ImageBackground />
+    <MenuWrapper>
+      <div>Login</div>
+    </MenuWrapper>
+  </>
 )
 
 export default Login
