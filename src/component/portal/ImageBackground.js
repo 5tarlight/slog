@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
-function getRandom(num) {
+function getRandom (num) {
   return Math.floor(Math.random() * num) + 1
 }
 

@@ -24,7 +24,7 @@ const style = {
   textDecoration: 'none',
   color: 'black',
   fontSize: '1.5rem',
-  fontWeight: 'bold',
+  fontWeight: 'bold'
 }
 
 const StartButton = () => (
