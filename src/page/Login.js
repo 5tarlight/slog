@@ -1,5 +1,5 @@
 import React from 'react'
-import { MenuWrapper, ImageBackground, Input, SubmitBtn } from '../component'
+import { MenuWrapper, ImageBackground, Input, SubmitBtn, Divider } from '../component'
 import styled from 'styled-components'
 
 const InputWrapper = styled.div`
@@ -33,7 +33,9 @@ const Login = () => (
         <ButtonWrapper>
           <SubmitBtn />
         </ButtonWrapper>
+
       </FormWrapper>
+      <Divider />
 
     </MenuWrapper>
   </>
