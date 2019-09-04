@@ -3,15 +3,14 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 const Button = styled.button`
-  border: none;
   width: 20rem;
   height: 8rem;
   border-radius: 0.5rem;
   background-color: transparent;  
-  top: 50%;
+  top: 70%;
   left: 50%;
   position: absolute;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -70%);
   justify-content: center;
   border: 5px solid white;
 

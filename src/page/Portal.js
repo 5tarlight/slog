@@ -1,9 +1,10 @@
 import React from 'react'
-import { StartButton, ImageBackground } from '../component'
+import { StartButton, ImageBackground, IntroMsg } from '../component'
 
 const Portal = () => (
   <>
     <ImageBackground />
+    <IntroMsg />
     <StartButton />
   </>
 )
