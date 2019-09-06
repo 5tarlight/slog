@@ -47,6 +47,8 @@ const Login = () => (
 
       <LoginWithG />
       <LoginWIthGit />
+
+      <Divider />
     </MenuWrapper>
   </>
 )
