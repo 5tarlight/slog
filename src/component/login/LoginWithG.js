@@ -12,6 +12,7 @@ const GWrapper = styled.div`
   padding: 1rem;
   line-height: 50px;
   font-weight: bolder;
+  font-size: 1rem;
 
   &:hover {
     cursor: pointer;
