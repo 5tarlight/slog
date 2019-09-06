@@ -1,5 +1,13 @@
 import React from 'react'
-import { MenuWrapper, ImageBackground, Input, SubmitBtn, Divider, LoginWithG } from '../component'
+import {
+  MenuWrapper,
+  ImageBackground,
+  Input,
+  SubmitBtn,
+  Divider,
+  LoginWithG,
+  LoginWIthGit
+} from '../component'
 import styled from 'styled-components'
 
 const InputWrapper = styled.div`
@@ -38,6 +46,7 @@ const Login = () => (
       <Divider />
 
       <LoginWithG />
+      <LoginWIthGit />
     </MenuWrapper>
   </>
 )
