@@ -51,8 +51,8 @@ const Login = () => (
       <LoginWithGit />
 
       <Divider />
-      <Option>비밀번호 찾기</Option>
-      <Option>회원가입</Option>
+      <Option to='/auth/pw'>비밀번호 찾기</Option>
+      <Option to='/auth/new'>회원가입</Option>
       <WithoutLogin />
     </MenuWrapper>
   </>
