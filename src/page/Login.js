@@ -6,7 +6,8 @@ import {
   SubmitBtn,
   Divider,
   LoginWithG,
-  LoginWIthGit
+  LoginWithGit,
+  WithoutLogin
 } from '../component'
 import styled from 'styled-components'
 
@@ -46,9 +47,11 @@ const Login = () => (
       <Divider />
 
       <LoginWithG />
-      <LoginWIthGit />
+      <LoginWithGit />
 
       <Divider />
+
+      <WithoutLogin />
     </MenuWrapper>
   </>
 )
