@@ -7,7 +7,8 @@ import {
   Divider,
   LoginWithG,
   LoginWithGit,
-  WithoutLogin
+  WithoutLogin,
+  Option
 } from '../component'
 import styled from 'styled-components'
 
@@ -50,7 +51,8 @@ const Login = () => (
       <LoginWithGit />
 
       <Divider />
-
+      <Option>비밀번호 찾기</Option>
+      <Option>회원가입</Option>
       <WithoutLogin />
     </MenuWrapper>
   </>
