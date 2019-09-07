@@ -4,6 +4,11 @@ import { Portal, Login } from './page'
 import { Header } from './component'
 
 class App extends Component {
+  state = {
+    isLogged: false,
+    email: ''
+  }
+
   render() {
     return (
       <BrowserRouter>
