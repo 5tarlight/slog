@@ -10,15 +10,15 @@ const Button = styled.div`
   text-align: center;
   background: rgb(100, 100, 100);
   color: white;
-  line-height: 6.5rem;
+  line-height: 156px;
   
   &:hover {
     cursor: pointer;
   }
 `
 
-const SubmitBtn = ({ children }) => (
-  <Button><p>{children || '로그인'}</p></Button>
+const SignUpBtn = ({ children }) => (
+  <Button><p>{children || '회원가입'}</p></Button>
 )
 
-export default SubmitBtn
+export default SignUpBtn

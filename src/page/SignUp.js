@@ -1,5 +1,5 @@
 import React from 'react'
-import { ImageBackground, MenuWrapper, Input, SubmitBtn } from '../component'
+import { ImageBackground, Input, SignUpWrapper, SignUpBtn } from '../component'
 import styled from 'styled-components'
 
 const InputWrapper = styled.div`
@@ -22,7 +22,7 @@ const FormWrapper = styled.div`
 const SignUp = () => (
   <>
     <ImageBackground />
-    <MenuWrapper>
+    <SignUpWrapper>
       <FormWrapper>
         <InputWrapper>
           <Input placeholder='이메일' type='email'/>
@@ -31,10 +31,10 @@ const SignUp = () => (
         </InputWrapper>
 
         <ButtonWrapper>
-          <SubmitBtn>회원가입</SubmitBtn>
+          <SignUpBtn>회원가입</SignUpBtn>
         </ButtonWrapper>
       </FormWrapper>
-    </MenuWrapper>
+    </SignUpWrapper>
   </>
 )
 
