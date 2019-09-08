@@ -6,6 +6,7 @@ function getRandom (num) {
 
 const ImageBackground = createGlobalStyle`
   body {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
     background-image: url('/img/portal_bg_${getRandom(8)}.jpg');
     background-repeat: no-repeat;
     background-size: cover;
