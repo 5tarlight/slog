@@ -5,7 +5,8 @@ const style = {
   textDecoration: 'none',
   color: '#845ef7',
   float: 'left',
-  fontSize: '0.8rem'
+  fontSize: '0.8rem',
+  marginRight: '0.5rem'
 }
 
 const Option = ({ to, children }) => (
