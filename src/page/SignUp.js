@@ -1,10 +1,12 @@
 import React from 'react'
-import { ImageBackground } from '../component'
+import { ImageBackground, MenuWrapper, Input } from '../component'
 
 const SignUp = () => (
   <>
     <ImageBackground />
-    <h1>ㅎㅇ</h1>
+    <MenuWrapper>
+
+    </MenuWrapper>
   </>
 )
 
