@@ -25,7 +25,7 @@ const SignUp = () => (
     <SignUpWrapper>
       <FormWrapper>
         <InputWrapper>
-          <Input placeholder='이메일' type='email'/>
+          <Input placeholder='이메일' type='email' />
           <Input placeholder='비밀번호' type='password' />
           <Input placeholder='비밀번호 확인' type='password' />
         </InputWrapper>
