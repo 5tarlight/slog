@@ -17,8 +17,8 @@ const Button = styled.div`
   }
 `
 
-const SignUpBtn = ({ children }) => (
-  <Button><p>{children || '회원가입'}</p></Button>
+const SignUpBtn = ({ onClick, children }) => (
+  <Button onClick={onClick}><p>{children || '회원가입'}</p></Button>
 )
 
 export default SignUpBtn
