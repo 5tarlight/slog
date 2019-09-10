@@ -51,8 +51,11 @@ class SignUp extends Component {
       } else if (email.indexOf('@') <= 0) {
         updateStatusMessage('유효하지 않은 이메일입니다.')
         return
-      } else if (pw === pwc) {
+      } else if (pw !== pwc) {
         updateStatusMessage('비밀번호가 일치하지 않습니다.')
+        return
+      } else {
+        updateStatusMessage('')
       }
     }
     
@@ -83,10 +86,9 @@ class SignUp extends Component {
               <Input
                 ref={ref=>{this.emailv=ref}}
                 placeholder='이메일'
-                type='email'
+                type='text'
                 key='email'
                 onChange={validate}
-                value={this.state.email}
               />
 
               <Input
@@ -95,7 +97,6 @@ class SignUp extends Component {
                 type='password'
                 key='pw'
                 onChange={validate}
-                value={this.state.pw}
               />
 
               <Input
@@ -104,7 +105,6 @@ class SignUp extends Component {
                 type='password'
                 key='pw_confirm'
                 onChange={validate}
-                value={this.state.pwc}
               />
             </InputWrapper>
   
