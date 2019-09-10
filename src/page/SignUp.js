@@ -38,18 +38,27 @@ class SignUp extends Component {
       const email = this.emailv.value.trim()
       const pw = this.pwv.value.trim()
       const pwc = this.pwcv.value.trim()
+      const emailRegExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i
+      const pwRegExp = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/ 
 
+      /*
+      이메일, 비번, 비번확인 체크
+      @ . 포함여부 체크
+      @ 앞 뒤로 문자 잇는지 체크
+      */
       if (!email) {
         updateStatusMessage('이메일을 입력해주세요.')
+        return
+      } else if (email.match(emailRegExp) == null) {
+        updateStatusMessage('유효하지 않은 이메일입니다.')
         return
       } else if (!pw) {
         updateStatusMessage('비밀번호를 입력해주세요.')
         return
+      } else if (pw.match(pwRegExp) == null) {
+        updateStatusMessage('비밀번호는 숫자, 영문자, 특수문자를 포함하는 8자리 이상의 문자열이어야 합니다.')
       } else if (!pwc) {
         updateStatusMessage('비밀번호 확인을 해주세요.')
-        return
-      } else if (email.indexOf('@') <= 0) {
-        updateStatusMessage('유효하지 않은 이메일입니다.')
         return
       } else if (pw !== pwc) {
         updateStatusMessage('비밀번호가 일치하지 않습니다.')
