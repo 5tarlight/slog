@@ -28,7 +28,6 @@ class SignUp extends Component {
   }
 
   render() {
-
     /**
      * 입력된 이메일과 비밀번호를 검사하고 데이터베이스에 적용
      */
