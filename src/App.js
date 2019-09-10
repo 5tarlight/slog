@@ -15,7 +15,7 @@ class App extends Component {
         <Header />
         <Route exact path='/' component={Portal} />
         <Route exact path='/login' component={Login} />
-        <Route exact path='/auth/new' component={SignUp} />
+        <Route exact path='/auth/new' render={() => <SignUp />} />
       </BrowserRouter>
     )
   }
