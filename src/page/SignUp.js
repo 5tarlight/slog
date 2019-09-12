@@ -44,9 +44,9 @@ class SignUp extends Component {
       const pwRegExp = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/ 
 
       /*
-      이메일, 비번, 비번확인 체크
-      @ . 포함여부 체크
-      @ 앞 뒤로 문자 잇는지 체크
+        이메일, 비번, 비번확인 체크
+        @ . 포함여부 체크
+        @ 앞 뒤로 문자 잇는지 체크
       */
       if (!email) {
         updateStatusMessage('이메일을 입력해주세요.')
