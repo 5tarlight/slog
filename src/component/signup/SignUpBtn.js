@@ -13,12 +13,12 @@ const Button = styled.div`
   line-height: 156px;
   
   &:hover {
-    cursor: pointer;
+    cursor: ${props => props.disabled ? 'not-allowed' : 'pointer'};
   }
 `
 
-const SignUpBtn = ({ onClick, children }) => (
-  <Button onClick={onClick}><p>{children || '회원가입'}</p></Button>
+const SignUpBtn = ({ onClick, children, disabled }) => (
+  <Button disabled={disabled} onClick={onClick}><p>{children || '회원가입'}</p></Button>
 )
 
 export default SignUpBtn

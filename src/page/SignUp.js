@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { ImageBackground, Input, SignUpWrapper, SignUpBtn } from '../component'
 import styled from 'styled-components'
+import qsb from 'node-qsb'
+import { SHA256 } from 'crypto-js' 
 
 const InputWrapper = styled.div`
   width: 80%;
@@ -24,7 +26,8 @@ class SignUp extends Component {
     email: '',
     pw: '',
     pwc: '',
-    status: '' 
+    status: '',
+    checked: false
   }
 
   render() {
@@ -77,7 +80,8 @@ class SignUp extends Component {
         status: msg,
         email: email,
         pw: pw,
-        pwc: pwc
+        pwc: pwc,
+        checked: msg ? false : true
       })
     }
 
@@ -117,7 +121,12 @@ class SignUp extends Component {
             </InputWrapper>
   
             <ButtonWrapper>
-              <SignUpBtn key='signup_button'>회원가입</SignUpBtn>
+              <SignUpBtn
+                key='signup_button'
+                disabled={!this.state.checked}
+              >
+                회원가입
+              </SignUpBtn>
             </ButtonWrapper>
           </FormWrapper>
         </SignUpWrapper>
