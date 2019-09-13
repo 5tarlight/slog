@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { ImageBackground, Input, SignUpWrapper, SignUpBtn } from '../component'
 import styled from 'styled-components'
-import { SHA256 } from 'crypto-js'
+import { createHash } from 'crypto'
 
 const InputWrapper = styled.div`
   width: 80%;
@@ -91,7 +91,7 @@ class SignUp extends Component {
 
       const email = this.emailv.value.trim()
       const pw = this.pwv.value.trim()
-      const pwHash = SHA256(email + pw)
+      const pwHash = createHash('sha1').update(email + pw).digest('base64')
 
       const body = {
         email: email,
@@ -100,7 +100,10 @@ class SignUp extends Component {
 
       const obj = {
         body: JSON.stringify(body),
-        headers: {},
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
         method: 'POST'
       }
 
