@@ -6,5 +6,4 @@ import DB from './lib/db'
 
 ReactDOM.render(<App />, document.getElementById('root'))
 
-DB.init()
 serviceWorker.unregister()

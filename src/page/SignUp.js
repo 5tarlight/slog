@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { ImageBackground, Input, SignUpWrapper, SignUpBtn } from '../component'
 import styled from 'styled-components'
-import qsb from 'node-qsb'
-import { SHA256 } from 'crypto-js' 
+import { SHA256 } from 'crypto-js'
 
 const InputWrapper = styled.div`
   width: 80%;
@@ -85,6 +84,16 @@ class SignUp extends Component {
       })
     }
 
+    const handleClick = (e) => {
+      e.preventDefault()
+
+      if(!this.state.checked) return
+
+      const email = this.emailv.value.trim()
+      const pw = this.pwv.value.trim()
+      const pwHash = SHA256(email + pw)
+    }
+
     return (
       <>
         <ImageBackground key='signup_imagebackground' />
@@ -124,6 +133,7 @@ class SignUp extends Component {
               <SignUpBtn
                 key='signup_button'
                 disabled={!this.state.checked}
+                onClick={handleClick}
               >
                 회원가입
               </SignUpBtn>
