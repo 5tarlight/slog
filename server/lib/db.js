@@ -1,5 +1,5 @@
 import { createConnection } from 'mysql'
-import * as config from './config.json'
+import * as config from './config.json.js'
 
 class DB {
   static conn
