@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "crypto-js": "^3.1.9-1",
     "json-loader": "^0.5.7",
     "koa": "^2.8.1",
     "koa-bodyparser": "^4.2.1",
