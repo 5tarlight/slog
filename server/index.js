@@ -2,6 +2,7 @@ const Koa = require('koa')
 const Router = require('koa-router')
 const BodyParser = require('koa-bodyparser')
 const cors = require('koa-cors')
+const DB = require('./lib/db')
 
 const api = require('./api')
 
@@ -16,5 +17,6 @@ app.use(BodyParser())
 app.use(router.routes()).use(router.allowedMethods());
 
 app.listen(4000, () => {
+  DB.init()
   console.log("server is running on port 4000")
 })
