@@ -1,5 +1,5 @@
 module.exports.signup = ctx => {
-  console.dir(ctx.request.body)
+  const { email, pw } = ctx.request.body
 
   ctx.body = {
     value: 'hello'
