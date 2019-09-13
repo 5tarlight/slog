@@ -1,16 +1,12 @@
-import { createConnection } from 'mysql'
-import * as config from './config.json.js'
+const mysql = require('mysql')
+const config = require('./config.json')
 
-class DB {
-  static conn
+let conn
 
-  static init() {
-    DB.conn = createConnection(config)
-  }
-
-  static query(query, callback) {
-    DB.conn.query(query, callback)
-  }
+module.exports.init = () => {
+  conn = mysql.createConnection(config)
 }
 
-export default DB
+module.exports.query = (query, callback) => {
+  conn.query(query, callback)
+}
