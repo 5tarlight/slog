@@ -1,6 +1,7 @@
 const Koa = require('koa')
 const Router = require('koa-router')
 const BodyParser = require('koa-bodyparser')
+const cors = require('koa-cors')
 
 const api = require('./api')
 
@@ -9,6 +10,7 @@ const router = new Router()
 
 router.use('/api', api.routes())
 
+app.use(cors())
 app.use(BodyParser())
 
 app.use(router.routes()).use(router.allowedMethods());

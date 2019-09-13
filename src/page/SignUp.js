@@ -92,6 +92,21 @@ class SignUp extends Component {
       const email = this.emailv.value.trim()
       const pw = this.pwv.value.trim()
       const pwHash = SHA256(email + pw)
+
+      const body = {
+        email: email,
+        pw: pwHash
+      }
+
+      const obj = {
+        body: JSON.stringify(body),
+        headers: {},
+        method: 'POST'
+      }
+
+      fetch('http://5tarlight.kro.kr:4000/api/auth/signup', obj)
+        .then(res => res.json())
+        .then(data => console.dir(data))
     }
 
     return (
