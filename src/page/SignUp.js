@@ -109,7 +109,11 @@ class SignUp extends Component {
 
       fetch('http://5tarlight.kro.kr:4000/api/auth/signup', obj)
         .then(res => res.json())
-        .then(data => console.dir(data))
+        .then(data => {
+          if(data.status === 200) {
+            window.location.href='/login'
+          }
+        })
     }
 
     return (

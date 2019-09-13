@@ -3,6 +3,10 @@ const qsb = require('node-qsb')
 
 module.exports.signup = ctx => {
   const { email, pw } = ctx.request.body
+  const rj = {
+    status: 200,
+    err: null
+  }
 
   const params = {
     cols: ['email', 'pw', 'verified'],
@@ -15,10 +19,14 @@ module.exports.signup = ctx => {
     .build()
   
   DB.query(qs.returnString(), (err, results, fields) => {
-    if(err) throw err
-  }) 
+    if(err) {
+      ctx.body = {
+        status: 400,
+        err: err
+      }
+      return
+    }
 
-  ctx.body = {
-    value: 'hello'
-  }
+  })
+  ctx.body = rj
 }
