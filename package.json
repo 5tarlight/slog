@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "body-parser": "^1.19.0",
     "crypto-js": "^3.1.9-1",
-    "express": "^4.17.1",
     "json-loader": "^0.5.7",
+    "koa": "^2.8.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
     "mysql": "^2.17.1",
     "node-qsb": "^0.0.4",
     "react": "^16.9.0",
