@@ -1,12 +1,28 @@
-const mysql = require('mysql')
-const config = require('./config.json')
+import { createConnection } from 'mysql'
+import * as config from './config.json'
 
-let conn
+class Database {
+  constructor () {
+    this.connection = createConnection(config.db)
+  }
 
-module.exports.init = () => {
-  conn = mysql.createConnection(config)
+  query (sql, values) {
+    return new Promise((resolve, reject) => {
+      this.connection.query(sql, values, (err, rows) => {
+        if (err) { return reject(err) }
+        resolve(rows)
+      })
+    })
+  }
+
+  close () {
+    return new Promise((resolve, reject) => {
+      this.connection.end(err => {
+        if (err) { return reject(err) }
+        resolve()
+      })
+    })
+  }
 }
 
-module.exports.query = (query, callback) => {
-  conn.query(query, callback)
-}
+export default Database
