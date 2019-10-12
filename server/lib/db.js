@@ -1,5 +1,5 @@
-import { createConnection } from 'mysql'
-import * as config from './config.json'
+const { createConnection } = require('mysql')
+const config = require('./config.json')
 
 class Database {
   constructor () {
@@ -25,4 +25,4 @@ class Database {
   }
 }
 
-export default Database
+module.exports = Database

@@ -17,6 +17,5 @@ app.use(BodyParser())
 app.use(router.routes()).use(router.allowedMethods());
 
 app.listen(4000, () => {
-  DB.init()
   console.log("server is running on port 4000")
 })
