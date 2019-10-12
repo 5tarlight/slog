@@ -45,5 +45,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "5tarlight.kro.kr:4000"
+  "proxy": "http://5tarlight.kro.kr:4000"
 }
