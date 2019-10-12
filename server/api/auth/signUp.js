@@ -1,32 +1,27 @@
-const DB = require('../../lib/db')
-const qsb = require('node-qsb')
+const Database = require('../../lib/db')
 
-module.exports.signup = ctx => {
+module.exports.signup = async ctx => {
   const { email, pw } = ctx.request.body
-  const rj = {
-    status: 200,
-    err: null
-  }
 
   const params = {
     cols: ['email', 'pw', 'verified'],
     vals: [email, pw, 0]
   }
 
-  const qs = new qsb()
-    .insert('user')
-    .values(params.cols, params.vals)
-    .build()
-  
-  DB.query(qs.returnString(), (err, results, fields) => {
-    if(err) {
-      ctx.body = {
-        status: 400,
-        err: err
-      }
-      return
-    }
+  const fail = {
+    code: 500,
+    msg: 'Server Error'
+  }
 
-  })
-  ctx.body = rj
+  const succ = {
+    code: 200,
+    msg: 'Success'
+  }
+
+  const query = `INSERT INTO user (email, pw, verified) VALUES (?, ?, 0)`
+  const DB = new Database()
+
+  DB.query(query, [email, pw]) 
+  ctx.status = 200
+  ctx.body = JSON.stringify(succ)
 }

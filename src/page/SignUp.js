@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { ImageBackground, Input, SignUpWrapper, SignUpBtn } from '../component'
 import styled from 'styled-components'
 import { createHash } from 'crypto'
+import client from '../lib/Client'
 
 const InputWrapper = styled.div`
   width: 80%;
@@ -98,22 +99,7 @@ class SignUp extends Component {
         pw: pwHash
       }
 
-      const obj = {
-        body: JSON.stringify(body),
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        },
-        method: 'POST'
-      }
-
-      fetch('http://5tarlight.kro.kr:4000/api/auth/signup', obj)
-        .then(res => res.json())
-        .then(data => {
-          if(data.status === 200) {
-            window.location.href='/login'
-          }
-        })
+      client.post('/api/auth/signup', body)
     }
 
     return (
