@@ -100,6 +100,8 @@ class SignUp extends Component {
       }
 
       client.post('/api/auth/signup', body)
+
+      window.location.href = '/login'
     }
 
     return (
