@@ -1,7 +1,9 @@
 {
-  "host": "localhost",
-  "port": 3306,
-  "database": "slog",
-  "user": "root",
-  "password": "YOUR DB PASSWORD HERE"
+  "db": {
+    "host": "localhost",
+    "port": 3306,
+    "database": "slog",
+    "user": "root",
+    "password": "YOUR DB PASSWORD HERE"
+  }
 }
