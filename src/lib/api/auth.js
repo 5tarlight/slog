@@ -6,7 +6,7 @@ export const register = ({ email, pw }) => {
 
   const body = {
     email: email,
-    pw: pwHash
+    pw: hash
   }
 
   client.post('/api/auth/signup', body)
