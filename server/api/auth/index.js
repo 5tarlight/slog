@@ -1,8 +1,8 @@
 const Router = require('koa-router')
-const signUp = require('./auth.ctrl')
+const auth = require('./auth.ctrl')
 
-const SignUp = new Router()
+const Auth = new Router()
 
-SignUp.post('/signup', signUp.signup)
+Auth.post('/signup', auth.register)
 
-module.exports = SignUp
+module.exports = Auth

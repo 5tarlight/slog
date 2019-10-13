@@ -1,6 +1,6 @@
 const Database = require('../../lib/db')
 
-module.exports.signup = async ctx => {
+module.exports.register = async ctx => {
   const { email, pw } = ctx.request.body
 
   const params = {
