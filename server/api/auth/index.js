@@ -1,5 +1,5 @@
 const Router = require('koa-router')
-const signUp = require('./signUp')
+const signUp = require('./auth.ctrl')
 
 const SignUp = new Router()
 
