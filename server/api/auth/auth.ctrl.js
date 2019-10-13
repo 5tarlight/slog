@@ -3,16 +3,6 @@ const Database = require('../../lib/db')
 module.exports.register = async ctx => {
   const { email, pw } = ctx.request.body
 
-  const params = {
-    cols: ['email', 'pw', 'verified'],
-    vals: [email, pw, 0]
-  }
-
-  const fail = {
-    code: 500,
-    msg: 'Server Error'
-  }
-
   const succ = {
     code: 200,
     msg: 'Success'
