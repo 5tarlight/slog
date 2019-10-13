@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { ImageBackground, Input, SignUpWrapper, SignUpBtn } from '../component'
 import styled from 'styled-components'
-import { createHash } from 'crypto'
-import client from '../lib/Client'
+import { register } from '../lib/api/auth'
 
 const InputWrapper = styled.div`
   width: 80%;
@@ -92,15 +91,8 @@ class SignUp extends Component {
 
       const email = this.emailv.value.trim()
       const pw = this.pwv.value.trim()
-      const pwHash = createHash('sha1').update(email + pw).digest('base64')
 
-      const body = {
-        email: email,
-        pw: pwHash
-      }
-
-      client.post('/api/auth/signup', body)
-
+      register(email, pw)
       window.location.href = '/login'
     }
 
